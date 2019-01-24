@@ -1,5 +1,5 @@
-# CS5800-Computer-Network
-NEU CS5800 Computer Network
+# CS5700-Computer-Network
+NEU CS5700 Computer Network
 
 Yunfan Tian
 
