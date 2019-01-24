@@ -1,0 +1,71 @@
+Team Name: DataCastle
+Team Member:
+Yunfan Tian (NUID: 001273551)
+
+
+In project 4, I implement three layers network protocol (HTTP/TCP/IP) based on python raw socket. Also, I implement many functionalities in TCP, like congestion control, pack and unpack IP and TCP headers, download file via http and so on.
+
+==========================================
+Directory Layout
+==========================================
+
+project4 is the root directory
+./rawhttpget                   : shell script to launch program
+./rawhttpget.py                : python script to implement the main TCP protocol
+./util.py                      : help functions like unpack ip_datagram
+
+launch program:
+sudo ./rawhttpget <url>
+
+==========================================
+Test commands (need root privileges)
+==========================================
+
+sudo ./rawhttpget http://cs5700f18.ccs.neu.edu/
+sudo ./rawhttpget http://david.choffnes.com/classes/cs4700sp17/2MB.log
+sudo ./rawhttpget http://david.choffnes.com/classes/cs4700sp17/10MB.log
+sudo ./rawhttpget http://david.choffnes.com/classes/cs4700sp17/50MB.log
+
+==========================================
+High Level Requirements
+==========================================
+
+1. Download file from remote server based on http
+
+2. Build IP and TCP headers
+   IP_datagram = IP_header + TCP_header + Data
+
+3. Use socket.SOCK_RAW/socket.IPPROTO_RAW to send packets
+   And socket.SOCK_RAW/socket.IPPTOTO_TCP to receive packets
+
+===========================================
+Low level Requirements
+===========================================
+
+Implements almost all features in instruction
+
+1. Building TCP and IP headers and set checksum. Pack and unpack headers.
+
+2. Filter incoming packets based on source and destination address and port number.
+
+3. Validate incoming packets based on seq and ack_seq number.
+
+4. Use existing OS APIs to query IP of the HTTP server and local machine.
+
+5. Perform the three-way handshake, and handle connection teardown.
+
+6. Set basic timeout to 60s.
+
+7. Retransmit packets if not receive ACK and discard duplicate packets
+
+8. Basic congestion control
+
+9. Reassemble incoming packets into correct order
+
+===========================================
+Challenges:
+===========================================
+
+1. Use Raw socket to send and receive packets. I need to pay attention to build headers, it's very easy to receive bugs.
+
+2. Implements the various TCP functionalities.

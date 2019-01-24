@@ -1,0 +1,28 @@
+Team Name: datacast
+Team Member:
+Yunfan Tian (NUID: 001273551)
+
+
+In project 5, I illustrate the design thought of my own CDN and do the bonus code
+
+==========================================
+Directory Layout
+==========================================
+
+project5 is the root directory
+./report.pdf                   : final report
+./paper                        : original latex files for final report
+./nearest_replica              : shell script to launch bonus program
+./nearest_replica.py           : python script to get nearest replica server
+
+launch program:
+./nearest_replica <ip>
+
+
+===========================================
+Challenges:
+===========================================
+
+1. It takes me a lot of time to read papers about CDN and cache replacement strategy, to select best algorithm for my project.
+
+

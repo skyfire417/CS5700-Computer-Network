@@ -1,0 +1,13 @@
+Name: Yunfan Tian  NUID: 001273551
+
+In this project, I use socket to send GET and POST to server, and use Breath first search to crawl the website. Then use regular expression and xpath to analyze the response.
+
+The biggest challenge is how to use sessionid and crvftoken as token in cookie to login server, I spend two days on it. Then the rest is how to implement BFS and optimize the algorithm to crawl the whole website.
+
+Yunfan Tian (me) do all the work in two days. My teammate Hao Li learn Math before and don't have too much coding experice, So I ask him to read some articles and codes and practice. 
+
+scenario 1: Bad input
+Program will print 'Invalid username or password' to screen and exit.
+
+scenario 2: right username and password
+Program will print 5 lines of secret flags to screen, and output flags to file. When the number of secret flags is 5, program will exit.
